@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <!-- Gradient animation for dynamic look -->
+    <linearGradient id="talentflow-animated-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="hsl(220,85%,25%)">
+        <animate attributeName="stop-color" values="hsl(220,85%,25%);hsl(220,70%,45%);hsl(220,85%,25%)" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="hsl(220,65%,5%)">
+        <animate attributeName="stop-color" values="hsl(220,65%,5%);hsl(220,75%,20%);hsl(220,65%,5%)" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="hsl(220,65%,10%)">
+        <animate attributeName="stop-color" values="hsl(220,65%,10%);hsl(220,85%,25%);hsl(220,65%,10%)" dur="6s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- Text shimmer mask -->
+    <linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="white" stop-opacity="0" />
+      <stop offset="50%" stop-color="white" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="white" stop-opacity="0" />
+      <animate attributeName="x1" values="-100%;100%" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="0%;200%" dur="3s" repeatCount="indefinite" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="64" height="64" rx="12" fill="url(#talentflow-animated-gradient)" />
+
+  <!-- TF Monogram -->
+  <text
+    x="50%"
+    y="58%"
+    text-anchor="middle"
+    font-size="30"
+    font-family="'Orbitron', 'Montserrat Alternates', 'Raleway', sans-serif"
+    font-weight="700"
+    fill="white"
+    letter-spacing="2"
+  >
+    TF
+  </text>
+
+  <!-- Shimmer overlay for premium look -->
+  <rect width="64" height="64" fill="url(#shimmer)" mask="url(#mask)" opacity="0.2" />
+</svg>
